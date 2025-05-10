@@ -328,5 +328,7 @@ if uploaded_file:
         st.download_button("Download Results as CSV", data=csv, file_name="vfp_optimization_results.csv", mime='text/csv')
 
 else:
-    st.warning("Please upload a valid CSV with THP and FlowRate data to proceed.")
-
+    #st.warning("Please upload a valid CSV with THP and FlowRate data to proceed.")
+        # Load placeholder data
+    st.warning("No file uploaded. Using placeholder data.")
+    df = pd.read_csv("input.csv")
